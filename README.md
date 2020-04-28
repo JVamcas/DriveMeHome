@@ -24,7 +24,7 @@ This app helps you to find a driver nearby to drive you home instead
 1. **The app search for the nearest driver**
 ![The app search for the nearest driver](https://user-images.githubusercontent.com/36502090/80468707-cfc59980-893f-11ea-987a-92bc8d3a7652.jpg)
 
-1.**Route on the map** 
+1. **Route on the map** 
 ![Route on the map](https://user-images.githubusercontent.com/36502090/80468695-cb997c00-893f-11ea-89d3-fbf46238c588.jpg)
 
 1. **Currently, no driver is associated with the trip**
