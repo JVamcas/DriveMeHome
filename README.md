@@ -16,7 +16,7 @@ This app helps you to find a driver nearby to drive you home instead
 ### How it works:
 
 1.  **The vehicle owner is shown the home page below showing his current location**\
-<img src="https://user-images.githubusercontent.com/36502090/80468706-cfc59980-893f-11ea-8bc8-6e791f6703e0.jpg" width="100" height="200">
+<img src="https://user-images.githubusercontent.com/36502090/80468706-cfc59980-893f-11ea-8bc8-6e791f6703e0.jpg" width="300" height="500">
 
 1.  **Vehicle owner set up his trip on the app**\
 ![Vehicle owner set up his trip on the app](https://user-images.githubusercontent.com/36502090/80468705-cfc59980-893f-11ea-8f00-d69bc7014e62.jpg)
