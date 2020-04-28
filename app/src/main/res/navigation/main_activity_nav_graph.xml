@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.authentication.LoginFragment"
+        android:label="Account Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.driverpair.HomeFragment"
+        android:label="GoHome"
+        tools:layout="@layout/fragment_driver_pair">
+        <action
+            android:id="@+id/action_homeFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment"
+            />
+    </fragment>
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+    <action android:id="@+id/action_global_updateUserProfileFragment"
+        app:destination="@id/updateUserProfileFragment"/>
+    <action android:id="@+id/action_global_currentTripFragment"
+        app:destination="@+id/currentTripFragment"
+        />
+    <action android:id="@+id/action_global_driverRequestFragment"
+        app:destination="@+id/driverRequestsFragment"
+        />
+    <fragment
+        android:id="@+id/updateUserProfileFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.home.UpdateUserProfileFragment"
+        android:label="Update Account Details"
+        tools:layout="@layout/fragment_update_user_profile" />
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.home.MyAccountFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_my_account" >
+        <action
+            android:id="@+id/action_myAccountFragment_to_updateUserProfileFragment"
+            app:destination="@id/updateUserProfileFragment" />
+    </fragment><action android:id="@+id/action_global_myAccountFragment" app:destination="@id/myAccountFragment"/>
+    <fragment
+        android:id="@+id/currentTripFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.driverpair.CurrentTripFragment"
+        android:label="My Trip"
+        tools:layout="@layout/fragment_current_trip" />
+    <fragment android:id="@+id/driverRequestsFragment"
+        android:name="com.owambo.jvamcas.drivemehome.ui.driverpair.DriverRequestFragment"
+        android:label="My Requests"
+        tools:layout="@layout/fragment_driver_request"
+        />
+
+</navigation>

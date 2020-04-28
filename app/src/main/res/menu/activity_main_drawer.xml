@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/my_account" />
+        <item android:id="@+id/drive_requests"
+            android:icon="@drawable/ic_my_drive_requests"
+            android:title="@string/drive_requests"/>
+        <item
+            android:id="@+id/nav_current_trip"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/current_trip" />
+
+        <item android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/feedback"
+            />
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share_app"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share_app"/>
+            <item
+                android:id="@+id/nav_share_twitter"
+                android:icon="@drawable/ic_twitter_bird"
+                android:title="@string/menu_share_twitter"/>
+            <item
+                android:id="@+id/nav_share_facebook"
+                android:icon="@drawable/ic_facebook"
+                android:title="@string/menu_share_facebook"/>
+        </menu>
+    </item>
+    <item android:title="@string/about">
+        <menu>
+            <item android:id="@+id/about_developer"
+                android:title="@string/about_developer"/>
+        </menu>
+    </item>
+
+</menu>

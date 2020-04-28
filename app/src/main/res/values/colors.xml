@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/app_bar</color>
+    <color name="colorPrimaryDark">@color/app_color</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#E9E5E5</color>
+    <color name="white">#ffffff</color>
+    <color name="splash_screen">@color/app_color</color>
+    <color name="app_color">#03A9F4</color>
+    <color name="app_bar">#0B68B1</color>
+    <color name="btn_ripple_color">#6AB8CF</color>
+    <color name="active_toggle_btn">#2196F3</color>
+    <color name="emphasis_color">#747477</color>
+    <color name="shimmer_background">#9DA0A0</color>
+    <color name="hint_color">#E91E63</color>
+    <color name="my_acc_background">#CACFCF</color>
+</resources>

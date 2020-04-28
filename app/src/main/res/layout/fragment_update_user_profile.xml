@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/user_icon_layout"
+            android:id="@id/user_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            bind:size="@{300}"
+            bind:mUser="@{mUser}"
+            bind:cameraVisible="@{true}"
+            />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_avatar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_my_account"
+                    style="@style/save_btn_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/btn_register"
+                    app:username="@{mUser.name}"
+                    app:email="@{mUser.email}"
+                    app:cellphone="@{mUser.cellphone}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vehicle_registration_number_layout" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fullname"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/personal_detail_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:errorMsg="@{errorMsg}"
+                        android:inputType="textCapWords"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:singleLine="true"
+                        android:text="@={mUser.name}"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_address"
+                    app:layout_constraintTop_toBottomOf="@id/name_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:errorMsg="@{errorMsg}"
+                        android:inputType="textWebEmailAddress"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:singleLine="true"
+                        android:text="@={mUser.email}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cellphone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    android:hint="@string/cellphone"
+                    app:layout_constraintTop_toBottomOf="@id/email_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cellphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:errorMsg="@{errorMsg}"
+                        android:inputType="phone"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        android:text="@={mUser.cellphone}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:id="@+id/license_code_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/license_code"
+                    app:layout_constraintTop_toBottomOf="@id/license_detail_title">
+
+                    <com.google.android.material.textview.MaterialAutoCompleteTextView
+                        android:id="@+id/license_code_dropdown"
+                        style="@style/dropdown_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="@={mUser.licenseCode}"
+                        android:dropDownHeight="wrap_content"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/license_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    android:hint="@string/license_number"
+                    app:layout_constraintTop_toBottomOf="@id/license_code_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/license_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp"
+                        android:inputType="textAutoComplete"
+                        android:singleLine="true"
+                        android:text="@={mUser.licenseNumber}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/vehicle_model_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/vehicle_model"
+                    app:layout_constraintTop_toBottomOf="@id/vehicle_detail_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicle_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:inputType="textAutoComplete"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:text="@={mUser.vehicleModel}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/vehicle_registration_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/vehicle_registration_number"
+                    app:layout_constraintTop_toBottomOf="@id/vehicle_model_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicle_registration_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:inputType="textAutoComplete"
+                        android:layout_marginBottom="10dp"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:text="@={mUser.vehicleRegistrationNumber}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <include
+                    android:id="@+id/personal_detail_title"
+                    layout="@layout/text_separator_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    bind:title="@{`Personal Details`}"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/name_layout"
+                    />
+
+                <include
+                    android:id="@+id/license_detail_title"
+                    layout="@layout/text_separator_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    bind:title="@{`Driver License Details`}"
+                    app:layout_constraintBottom_toTopOf="@id/license_code_layout"
+                    app:layout_constraintTop_toBottomOf="@id/cellphone_layout" />
+                <!-- Login Button -->
+                <include
+                    android:id="@+id/vehicle_detail_title"
+                    layout="@layout/text_separator_line"
+                    android:layout_width="match_parent"
+                    bind:title="@{`Vehicle Details`}"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/vehicle_model_layout"
+                    app:layout_constraintTop_toBottomOf="@id/license_number_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <import type="com.owambo.jvamcas.drivemehome.R" />
+        <variable
+            name="mUser"
+            type="com.owambo.jvamcas.drivemehome.data.model.User" />
+        <variable
+            name="errorMsg"
+            type="String" />
+    </data>
+</layout>

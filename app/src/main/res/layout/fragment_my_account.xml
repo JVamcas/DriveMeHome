@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        bind:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/my_acc_background"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="5dp"
+        >
+        <include layout="@layout/user_icon_layout"
+            android:id="@id/user_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            bind:size="@{300}"
+            bind:mUser="@{mUser}"
+            bind:cameraVisible="@{false}"
+            />
+        <include
+            android:id="@+id/personal_detail_title"
+            layout="@layout/text_separator_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            bind:title="@{`Personal Details`}"
+            bind:layout_constraintTop_toBottomOf="@id/user_avatar"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            bind:layout_constraintTop_toBottomOf="@id/personal_detail_title"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{mUser.name == null? `Unkown`:mUser.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            android:textColor="@color/app_color"
+            android:textStyle="bold"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cellphone"
+            bind:layout_constraintTop_toBottomOf="@id/user_name"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`Cell: `+(mUser.cellphone == null? `Unknown`:mUser.cellphone)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            bind:layout_constraintTop_toBottomOf="@id/cellphone"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`Email: `+(mUser.email == null? `Unknown`:mUser.email)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <include
+            android:id="@+id/license_detail_title"
+            layout="@layout/text_separator_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            bind:title="@{`Driver License Details`}"
+            bind:layout_constraintTop_toBottomOf="@id/email"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/license_code"
+            bind:layout_constraintTop_toBottomOf="@id/license_detail_title"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`Code: `+(mUser.licenseCode == null? `Unknown`:mUser.licenseCode)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/license_number"
+            bind:layout_constraintTop_toBottomOf="@id/license_code"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`License No: `+(mUser.licenseNumber == null? `Unknown`:mUser.licenseNumber)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <include
+            android:id="@+id/vehicle_detail_title"
+            layout="@layout/text_separator_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            bind:title="@{`Vehicle Details`}"
+            bind:layout_constraintTop_toBottomOf="@id/license_number"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_model"
+            bind:layout_constraintTop_toBottomOf="@id/vehicle_detail_title"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`Model: `+(mUser.vehicleModel == null? `Unknown`:mUser.vehicleModel)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicle_registration_number"
+            bind:layout_constraintTop_toBottomOf="@id/vehicle_model"
+            bind:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="2dp"
+            android:text="@{`Registration Number: `+(mUser.vehicleRegistrationNumber == null? `Unknown`:mUser.vehicleRegistrationNumber)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textColor="@color/app_color"
+            />
+        <View
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toStartOf="parent"
+            bind:layout_constraintBottom_toBottomOf="parent"
+            bind:layout_constraintTop_toBottomOf="@id/vehicle_registration_number"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <data>
+
+        <variable
+            name="mUser"
+            type="com.owambo.jvamcas.drivemehome.data.model.User" />
+    </data>
+</layout>

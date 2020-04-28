@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A3A8AA"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginBottom="100dp">
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/confirm_exit_text"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/ads_layout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="2dp"
+        ></LinearLayout>
+    <com.google.android.material.textview.MaterialTextView
+        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/confirm_exit_text"
+        android:text="@string/sure_to_exit"
+        android:padding="10dp"
+        />
+    <View
+        app:layout_constraintBottom_toTopOf="@id/cancel_exit_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1dp"
+        android:id="@+id/horizontal_line"
+        android:background="#E4E1C2"/>
+    <com.google.android.material.button.MaterialButton
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok_exit_btn"
+        android:text="@string/Exit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_margin="5dp"
+        style="@style/exit_btn_theme"
+        android:textStyle="bold"
+        android:background="#A3A8AA"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Cancel"
+        style="@style/exit_btn_style"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:background="#A3A8AA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:id="@+id/cancel_exit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

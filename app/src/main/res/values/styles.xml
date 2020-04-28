@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/app_bar</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="textInputStyle">@style/text_input_layout</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="exit_btn_theme" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">#868883</item>
+        <item name="android:textColor">#fff</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+
+    <style name="myToolBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColor">#2E2C2C</item>
+    </style>
+
+    <style name="text_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:background">@color/white</item>
+        <item name="hintTextColor">@color/hint_color</item>
+    </style>
+
+    <style name="dropdown_menu" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="save_btn_theme" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="backgroundTint">@color/save_btn_enabled</item>
+        <item name="rippleColor">@color/btn_ripple_color</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="exit_btn_style" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/hint_color</item>
+        <item name="elevation">15dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="rippleColor">#CF5B94</item>
+    </style>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/from_layout"
+                android:paddingStart="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="2dp"
+                android:text="@{`From : `+mTrip.start.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="16sp"
+                android:textColor="@color/app_color"
+                android:textStyle="bold"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/to_layout"
+                android:paddingStart="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from_layout"
+                android:layout_marginBottom="2dp"
+                android:text="@{`To : `+mTrip.destination.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="16sp"
+                android:textColor="@color/app_color"
+                android:textStyle="bold"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/trip_charge_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_charge"
+                app:layout_constraintTop_toBottomOf="@id/to_layout"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/trip_charge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:inputType="textAutoComplete"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:currency="@{`NAD`}"
+                    app:errorMsg="@{errorMsg}"
+                    android:text="@{driverCharge}" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_trip_charge"
+                style="@style/save_btn_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/update"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/trip_charge_layout"
+                app:layout_constraintBottom_toBottomOf="@id/trip_charge_layout"
+                 />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/driver_reject_client_request"
+                style="@style/exit_btn_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/driver_reject_client_request"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trip_charge_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+<data>
+    <variable
+        name="mTrip"
+        type="com.appspot.drivemehome_86841.drivemehomeapi.model.Trip" />
+    <variable
+        name="driverCharge"
+        type="String" />
+    <variable
+        name="errorMsg"
+        type="String" />
+</data>
+</layout>

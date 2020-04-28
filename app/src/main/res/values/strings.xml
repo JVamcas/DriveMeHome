@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">GoHome</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="authentication_error">Authentication Error!</string>
+    <string name="no_internet">Err: No internet Connection!</string>
+    <string name="sure_to_exit">Do you really want to exit?</string>
+
+
+    <string name="Exit">Exit</string>
+    <string name="Cancel">Cancel</string>
+    <string name="user_signout">LogOut</string>
+    <string name="my_account">My Account</string>
+    <string name="current_trip">My Trip</string>
+    <string name="communicate">Communicate</string>
+    <string name="menu_share_app">Share App</string>
+    <string name="about_developer">About Developer</string>
+    <string name="menu_share_twitter">Share On Twitter</string>
+    <string name="menu_share_facebook">Share on Facebook</string>
+    <string name="save_picture">Save Picture</string>
+    <string name="about">Info</string>
+    <string name="feedback">Feedback</string>
+    <string name="file_name">file_path</string>
+
+    <string name="google_map_api">Google_map_API</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="btn_register">Save</string>
+    <string name="user_avatar">user_icon_avatar</string>
+    <string name="fullname">Full Name</string>
+    <string name="email_address">E-mail</string>
+    <string name="cellphone">Cellphone Number</string>
+    <string name="license_code">License code</string>
+    <string name="usertype">User Type</string>
+    <string name="license_number">License Number</string>
+    <string name="vehicle_model">Model</string>
+    <string name="vehicle_registration_number">Registration Number</string>
+    <string name="update_my_profile">Update My Profile</string>
+    <string name="empty_text_input_error">Field cannot be empty.</string>
+    <string name="vehicle_details">Vehicle Details</string>
+    <string name="driver_license_details">Driver License Details</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="permission_denied">Err: Permission Denied!</string>
+    <string name="unknown_error">Err: Unknown error!</string>
+    <string name="profile_update_success">Account updated successfully!</string>
+    <string name="take_picture">Take A Picture</string>
+    <string name="preview_icon">preview icon</string>
+    <string name="search_place_title">Set up your trip</string>
+    <string name="start_location">Start Location</string>
+    <string name="destination">Destination</string>
+    <string name="find_a_driver">Find A Driver</string>
+    <string name="setup_trip">You first need to setup your trip.</string>
+    <string name="tag_nearby_driver">NEARBY_DRIVER</string>
+    <string name="cancel_trip_snackbar">Current trip info will be lost.</string>
+    <string name="OK">OK</string>
+    <string name="profile_pic_update_success">Profile picture updated successfully.</string>
+    <string name="drive_requests">My Requests</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel_trip">Cancel Trip</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_driver">This trip has no driver, please select a nearby driver on the map.</string>
+    <string name="your_charge">Your charge for this trip</string>
+    <string name="update">Update</string>
+    <string name="driver_reject_client_request">Reject Request</string>
+    <string name="no_driver_request">Looks like there\'s been no requests for your service.</string>
+    <string name="no_active_trip">You have no active trip, try to set up one.</string>
+    <string-array name="userType">
+        <item>Driver</item>
+        <item>Vehicle Owner</item>
+    </string-array>
+
+    <string-array name="license_code">
+        <item>A</item>
+        <item>B</item>
+        <item>BE</item>
+        <item>C</item>
+        <item>CE</item>
+        <item>CE1</item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "46635282211",
+    "firebase_url": "https://drivemehome-86841.firebaseio.com",
+    "project_id": "drivemehome-86841",
+    "storage_bucket": "drivemehome-86841.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46635282211:android:6b2d1b1ff05acf000f6696",
+        "android_client_info": {
+          "package_name": "com.owambo.jvamcas.drivemehome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46635282211-76fq5qi5g4jfcprplq7fj8lec36nv2uj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4UhGLq2ioyL1BNTkf8zzd0R4_9onprsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46635282211-76fq5qi5g4jfcprplq7fj8lec36nv2uj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

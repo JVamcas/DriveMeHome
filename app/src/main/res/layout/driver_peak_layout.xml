@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/license_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:text="@{`License Code: `+(mUser.licenseCode == null? `Unknown`:mUser.licenseCode)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/app_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/trip_charge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/action_btn"
+            app:layout_constraintTop_toTopOf="@id/action_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/trip_charge"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="@{`Cost: `+driverCharge}"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/app_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="4dp"
+            android:text="@{buttonText == null ? `Confirm`: buttonText}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trip_charge"
+            style="@style/save_btn_theme"
+             />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            android:paddingStart="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personal_detail_title"
+            android:layout_marginBottom="2dp"
+            android:text="@{mUser.name == null? `Unkown`:mUser.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            android:textColor="@color/app_color"
+            android:textStyle="bold"
+            />
+
+        <include
+            android:id="@+id/user_avatar"
+            layout="@layout/user_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            bind:cameraVisible="@{false}"
+            bind:mUser="@{mUser}"
+            bind:size="@{200}" />
+
+        <include
+            android:id="@+id/personal_detail_title"
+            layout="@layout/text_separator_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_avatar"
+            bind:title="@{`Personal Details`}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="driverCharge"
+            type="String" />
+
+        <variable
+            name="mUser"
+            type="com.owambo.jvamcas.drivemehome.data.model.User" />
+        <variable
+            name="buttonText"
+            type="String" />
+    </data>
+</layout>

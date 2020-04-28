@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/nav_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:backgroundTint="@color/app_bar">
+
+        <include
+            layout="@layout/user_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal"
+            bind:mUser="@{mUser}"
+            bind:size="@{300}"
+            bind:cameraVisible="@{false}"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <data>
+        <variable
+            name="mUser"
+            type="com.owambo.jvamcas.drivemehome.data.model.User" />
+    </data>
+</layout>
