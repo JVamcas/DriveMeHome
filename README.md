@@ -28,10 +28,10 @@ This app helps you to find a driver nearby to drive you home instead
 <img src="https://user-images.githubusercontent.com/36502090/80468695-cb997c00-893f-11ea-89d3-fbf46238c588.jpg" width="400" height="600">
 
 1. **Currently, no driver is associated with the trip**\
-![Currently, no driver is associated with the trip](https://user-images.githubusercontent.com/36502090/80468657-bf152380-893f-11ea-90a3-3ef28b6fbc51.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468657-bf152380-893f-11ea-90a3-3ef28b6fbc51.jpg" width="400" height="600">
 
 1.  **After vehicle owner select a driver, app notifies the driver who then dispatches**\
-![After vehicle owner select a driver, app notifies the driver who then dispatches](https://user-images.githubusercontent.com/36502090/80468653-bde3f680-893f-11ea-8ebe-4fe6e42e7ee3.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468653-bde3f680-893f-11ea-8ebe-4fe6e42e7ee3.jpg" width="400" height="600">
 
 1. **The trip now has a driver**\
-![The trip now has a driver](https://user-images.githubusercontent.com/36502090/80468591-a86ecc80-893f-11ea-8c02-8247f3aa70bb.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468591-a86ecc80-893f-11ea-8c02-8247f3aa70bb.jpg" width="400" height="600">
