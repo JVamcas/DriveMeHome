@@ -7,11 +7,12 @@ police for drunk driving?**
 
 ***
 
-**This is where #DriveMeHome comes in:**
+**This is where DriveMeHome comes in:**
+***
 
 This app helps you to find a driver nearby to drive you home instead
 
-**This app is an incomplete project that has been frozen for now**
+**This is an incomplete project that has been frozen for now**
 
 ### How it works:
 
