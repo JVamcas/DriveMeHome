@@ -16,16 +16,16 @@ This app helps you to find a driver nearby to drive you home instead
 ### How it works:
 
 1.  **The vehicle owner is shown the home page below showing his current location**\
-<img src="https://user-images.githubusercontent.com/36502090/80468706-cfc59980-893f-11ea-8bc8-6e791f6703e0.jpg" width="300" height="500">
+<img src="https://user-images.githubusercontent.com/36502090/80468706-cfc59980-893f-11ea-8bc8-6e791f6703e0.jpg" width="400" height="600">
 
 1.  **Vehicle owner set up his trip on the app**\
-![Vehicle owner set up his trip on the app](https://user-images.githubusercontent.com/36502090/80468705-cfc59980-893f-11ea-8f00-d69bc7014e62.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468705-cfc59980-893f-11ea-8f00-d69bc7014e62.jpg" width="400" height="600">
 
 1.  **The app search for the nearest driver**\
-![The app search for the nearest driver](https://user-images.githubusercontent.com/36502090/80468707-cfc59980-893f-11ea-987a-92bc8d3a7652.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468707-cfc59980-893f-11ea-987a-92bc8d3a7652.jpg" width="400" height="600">
 
 1.  **Route on the map**\
-![Route on the map](https://user-images.githubusercontent.com/36502090/80468695-cb997c00-893f-11ea-89d3-fbf46238c588.jpg)
+<img src="https://user-images.githubusercontent.com/36502090/80468695-cb997c00-893f-11ea-89d3-fbf46238c588.jpg" width="400" height="600">
 
 1. **Currently, no driver is associated with the trip**\
 ![Currently, no driver is associated with the trip](https://user-images.githubusercontent.com/36502090/80468657-bf152380-893f-11ea-90a3-3ef28b6fbc51.jpg)
